@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Profile</h2>
+        <p><span>Username:</span> {{ user.username }}</p>
+        <p><span>Email:</span> {{ user.email }}</p>
+        <p><span>Date Joined:</span> {{ user.date_joined }}</p>
+        <p><span>Last Login:</span> {{ user.last_login }}</p>
+
+        <div class="profile-links">
+            <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

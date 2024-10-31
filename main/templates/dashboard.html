@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <h2>Hi, {{ user.username }} !</h2>
+    <div class="dashboard-container">
+        <div class="dashboard-links">
+            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'change_pass' %}">Change Password</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

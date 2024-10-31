@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter New Password | Django Site Admin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter New Password</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Renders form fields in <p> tags by default -->
+            
+            <button type="submit">Change my password</button>
+        </form>
+    </div>
+</body>
+</html>
